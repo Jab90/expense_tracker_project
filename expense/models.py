@@ -9,7 +9,7 @@ class Expense(models.Model):
     """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     item = models.CharField(max_length=50)
-    created_on = models.DateTimeField(auto_now_add=True)
+    
 
     currency_choices = [ 
         ('GBP', 'GBP'), 
@@ -25,8 +25,10 @@ class Expense(models.Model):
 
     amount = models.DecimalField( max_digits=10, decimal_places=2)
 
+    created_on = models.DateTimeField(auto_now_add=True)
+
     class Meta: 
-        ordering = ["amount"]
+        ordering = ["-amount"]
 
     def __str__(self):
         return self.item
