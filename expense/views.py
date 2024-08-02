@@ -7,9 +7,7 @@ class HomePage(TemplateView):
     """
     Displays home page"
     """
-    template_name = 'base.html'
+    template_name = "expense/index.html"
 
-# class HomePage(generic.ListView):
-#     queryset = Expense.objects.all()
-#     template_name = "expense_list.html"
+
     
