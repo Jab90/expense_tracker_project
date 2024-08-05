@@ -3,16 +3,16 @@
 {% load i18n %}
 {% load account socialaccount %}
 
-{% block head_title %}{% trans "Sign In" %}{% endblock %}
+{% block head_title %}{% trans "Sign In To Penny Pinchers" %}{% endblock %}
 
 {% block content %}
 
 <div class="container">
     <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
-            <h3>{% trans "Sign In" %}</h3>
+            <h3>{% trans "Welcome back to Penny Pinchers!" %}</h3>
 
-            <p>{% blocktrans %}Welcome back to the Penny Pinchers. To use our expense tracker, please log in. If
+            <p>{% blocktrans %} To use our expense tracker, please log in. If
                 you
                 have not created an account yet, then <a class="link text-danger" href="{{ signup_url }}">sign up</a>
                 first.{% endblocktrans %}</p>

@@ -27,3 +27,7 @@ As a user of the app I want to be able to do the following:
  - Have access and view my expenses. 
  - Add, delete and edit any of my expenses. 
  - Ensure that my personal data is private and secure. 
+
+# Agile Methodology 
+
+When developing this app an agile approach has been taken throughout this project. I broke each instance down into smaller User stories so they were refined into more manageable tasks therefore each User story has different acceptance criterias. The link to the kanban board for the User Stories can be found [HERE]. By doing this it has made it easier for me to buld the project. 

@@ -5,6 +5,9 @@ from .models import Expense
 
 class HomePage(TemplateView):
     """
-    Displays home page"
+    Displays Home page"
     """
     template_name = "expense/index.html"
+
+def expense_tool(request):
+    return render(request, 'expense/expense_tool.html')
