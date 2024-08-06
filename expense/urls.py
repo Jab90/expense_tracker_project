@@ -6,7 +6,7 @@ path('', views.HomePage.as_view(), name='home'),
 path('', views.expense_tool, name='expense_tool'),
 path('expense_tool', views.expense_tool, name='expense_tool'),
 path('add/', views.add, name='add'),
-path('edit/', views.edit, name='edit'),
+path('edit/<int:edit_id>/', views.edit, name='edit'),
 ]
 
 

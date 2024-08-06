@@ -1,4 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 from django.views.generic import TemplateView
 from django.views import generic
 from django.contrib import messages
@@ -40,5 +42,24 @@ def add(request):
     return render(request, 'expense/add.html', {'expense_form': expense_form})
 
 
-def edit(request):
+def edit(request, edit_id):
+
+    expense = get_object_or_404(Expense, pk=edit_id, user=request.user)
+
+    if request.method == "POST": 
+        expense_form = ExpenseForm(data=request.POST, instance=expense)
+        if expense_form.is_valid():
+            expense_form.save()
+            messages.success(request, 'Expense Updated!')
+            return HttpResponseRedirect(reverse("expense_tool"))
+        else:
+            messages.error(request, "Error updating expense!")
+    else: 
+        expense_form = ExpenseForm(instance=expense)
+    
+    return render(
+        request, 'expense/edit.html',
+        {'form': expense_form, 'edit_id': edit_id}
+    )
+
     return render(request, 'expense/edit.html')
