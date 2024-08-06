@@ -1,0 +1,13 @@
+<h1 class="display-5 text-center">Your Expenses</h1>
+            <ul class="expenses-list">
+                <!-- List elements go here -->
+                {% for expense in expenses %}
+                <li class="items">
+                    <!-- Edit and delete buttons after adding an expense -->
+                     <div class="item-buttons">
+                        <button class="btn btn-primary">Edit</button>
+                        <button class="btn btn-danger">Delete</button>
+                     </div>
+                </li>
+                {% endfor %}
+            </ul>

@@ -11,3 +11,6 @@ class HomePage(TemplateView):
 
 def expense_tool(request):
     return render(request, 'expense/expense_tool.html')
+
+def add(request):
+    return render(request, 'expense/add.html')

@@ -50,6 +50,8 @@ INSTALLED_APPS = [
     'django_summernote', 
     'cloudinary_storage',
     'cloudinary',
+    'crispy_forms',
+    'crispy_bootstrap5',
     'expense',
     'about',
 ]
@@ -57,6 +59,9 @@ INSTALLED_APPS = [
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/expense/expense_tool'
 LOGOUT_REDIRECT_URL = '/accounts/login/'
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 CSRF_TRUSTED_ORIGINS = [
     "https://*.codeinstitute-ide.net",

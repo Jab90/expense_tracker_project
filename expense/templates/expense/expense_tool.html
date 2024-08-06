@@ -108,8 +108,42 @@
         {% endif %}
 
         {% block content %}
-        <!-- Content Goes here -->
-         
+        <!-- Main Content on Expenses page Goes here -->
+         <div class="container">
+            <div class="row mb-3">
+                <h1 class="display-5 text-center mb-3">Your Expenses</h1>
+                <div class="col d-flex justify-content-center">
+                    <a href="{% url 'add' %}" class="btn btn-success">Add Expense</a>
+                </div>
+            </div>
+
+            <ul class="list">
+                {% for expense in expenses %}
+                <!-- Item list -->
+                 <li class="item">
+                    <!-- Delete and Edit buttons -->
+                     <div class="item-buttons">
+                        <a href="{% url 'edit' edit_id=expense.id %}" class="btn btn-primary">Edit</a>
+                        <button class="btn btn-danger delete-expense mr-3" data-expense-id="{{ expense.id }}">Delete</button>
+                     </div>
+                     <div class="item-small">
+                        <span class="item-name">{{ expense.item }}</span>
+                        <span class="item-amount">{{ expense.amount }}</span>
+                        <span class="item-currency">{{ expense.currency }}</span>
+                     </div>
+                 </li>
+                {% endfor %}
+                <!-- Total amount -->
+                 <li class="item total-expenses">
+                    <span class="total-expenses-title"> Your total expenses are:</span>
+                    <span class="total-expense-sum">
+                        {{ total_amount|default:"0" }}
+                    </span>
+                 </li>
+            </ul>
+            
+         </div>
+       
         {% endblock content %}
 
     </main>
