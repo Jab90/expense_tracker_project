@@ -15,16 +15,30 @@ class HomePage(TemplateView):
 
 def expense_tool(request):
 
-    expenses = Expense.objects.filter(user=request.user)
+    """
+    Displays the expense tool page which houses the list of expenses
+    and the total sum of expenses, but can only access this page if 
+    the user is logged in. (User authenticated).
+    """
+    # A queryset that has all the expenses belonging to the user thats logged in. 
+    expenses = Expense.objects.filter(user=request.user) 
+
+    # The logged in users total amount of expenses. 
     total_amount = sum(expense.amount for expense in expenses)
+
     return render(request, 'expense/expense_tool.html',{
         "expenses": expenses,
         "total_amount": total_amount,
     })
 
 def add(request):
-    
 
+    """
+    Page allows authenticated users to add a new expense to thier list.
+    Users who arent authenticated will not have access to this page. 
+    """
+    
+    # POST: Will submit the expense form and adds a new expense to the database
     if request.method == 'POST':
         expense_form = ExpenseForm(data=request.POST)
         if expense_form.is_valid():
@@ -44,8 +58,13 @@ def add(request):
 
 def edit(request, edit_id):
 
+    """
+    Allows only authenticated users to edit exiting expenses on their list.
+    """
+
     expense = get_object_or_404(Expense, pk=edit_id, user=request.user)
 
+    # POST: Will submit the expense form and edits and existing expense to the database
     if request.method == "POST": 
         expense_form = ExpenseForm(data=request.POST, instance=expense)
         if expense_form.is_valid():
@@ -60,15 +79,22 @@ def edit(request, edit_id):
     return render(
         request, 'expense/edit.html',
         {'form': expense_form, 'edit_id': edit_id}
+        # edit_id is the unique ID of the expense thats being edited.
     )
 
     return render(request, 'expense/edit.html')
 
 def delete(request, expense_id):
 
+    """
+    Authenticated users allowed to delete thier expense entries.
+    """
+
     expense = get_object_or_404(Expense, pk=expense_id, user=request.user)
+    # POST: Will submit the expense form and delete an exisiting expense to the database.
     if request.method == 'POST':
         expense.delete()
         messages.success(request, "Expense Deleted!")
     
+    # After deleting, a redirection occurs to the expense tool page. 
     return redirect("expense_tool")
