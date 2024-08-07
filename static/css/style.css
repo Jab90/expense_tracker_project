@@ -23,7 +23,7 @@
 
 /* Expenses */
 
-/* .list { 
+.list { 
     list-style: none;
 }
 
@@ -31,4 +31,12 @@
     border: red solid;
     display: flex;
     justify-content: space-between;
-} */ 
+} 
+
+body {
+    border: red solid 2px;
+}
+
+h3 {
+    color: red;
+}
