@@ -63,3 +63,12 @@ def edit(request, edit_id):
     )
 
     return render(request, 'expense/edit.html')
+
+def delete(request, expense_id):
+
+    expense = get_object_or_404(Expense, pk=expense_id, user=request.user)
+    if request.method == 'POST':
+        expense.delete()
+        messages.success(request, "Expense Deleted!")
+    
+    return redirect("expense_tool")
