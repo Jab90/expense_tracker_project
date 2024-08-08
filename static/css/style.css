@@ -1,5 +1,6 @@
- /* body {
+ body {
     background-color: #F9FAFC;
+    border: red 2px solid;
 }
 
 .brand {
@@ -19,7 +20,7 @@
 
 .main-bg {
     background-color: #F9FAFC;
-} */
+}
 
 /* Expenses */
 
@@ -28,13 +29,28 @@
 }
 
 .item {
-    border: black 1px;
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 10px;
 } 
 
+.item-buttons {
+    display: flex;
+    gap: 5px;
+    margin-right: 15px;
+}
+
 .item-name { 
+    display: block;
     padding-left: 15px;
+}
+
+.item-amount { 
+    padding-left: 15px;
+}
+
+.total-expense-sum {
+    padding-left: 10px;
 }
 
