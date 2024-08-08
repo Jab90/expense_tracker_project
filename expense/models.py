@@ -10,7 +10,6 @@ class Expense(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     item = models.CharField(max_length=50)
     
-
     currency_choices = [ 
         ('GBP', 'GBP'), 
         ('USD', 'USD'),

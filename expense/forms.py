@@ -15,3 +15,4 @@ class ExpenseForm(forms.ModelForm):
             'amount': forms.NumberInput(attrs={'placeholder': 'Enter amount', 'min': '0', 'step': '0.01'}),
             'currency': forms.Select(attrs={'placeholder': 'Enter currency'}),
         }
+

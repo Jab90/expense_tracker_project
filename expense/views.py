@@ -56,11 +56,13 @@ def add(request):
     return render(request, 'expense/add.html', {'expense_form': expense_form})
 
 
+
 def edit(request, edit_id):
 
     """
     Allows only authenticated users to edit exiting expenses on their list.
     """
+
 
     expense = get_object_or_404(Expense, pk=edit_id, user=request.user)
 
