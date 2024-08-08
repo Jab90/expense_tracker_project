@@ -37,23 +37,52 @@ def add(request):
     Page allows authenticated users to add a new expense to thier list.
     Users who arent authenticated will not have access to this page. 
     """
+
+    # Get the existing expenses for the logged-in user
+
+    expenses = Expense.objects.filter(user=request.user)
+
+    # Check if the user already has expenses, and if so get the currency
+
+    existing_currency = None
+    if expenses.exists():
+        existing_currency = expenses.first().currency
     
     # POST: Will submit the expense form and adds a new expense to the database
     if request.method == 'POST':
         expense_form = ExpenseForm(data=request.POST)
         if expense_form.is_valid():
-            expense = expense_form.save(commit=False)
-            expense.user = request.user
-            expense.save()
-            messages.add_message(
-                request, messages.SUCCESS, 
-                'Expense added!'
-            )
-            return redirect('expense_tool')
+            new_expense = expense_form.save(commit=False)
+            new_expense.user = request.user
+
+            # Check if the new expense currency matches the exisiting one
+            if existing_currency and new_expense.currency != existing_currency:
+                messages.error(
+                    request,
+                    f"You cannot mix different currencies. Your current expenses are in {existing_currency}."
+                )
+            else:
+                new_expense.save()
+                messages.success(request, 'Expense Added!')
+                return redirect('expense_tool')
+
     else: 
         expense_form = ExpenseForm()
 
     return render(request, 'expense/add.html', {'expense_form': expense_form})
+
+    #         expense = expense_form.save(commit=False)
+    #         expense.user = request.user
+    #         expense.save()
+    #         messages.add_message(
+    #             request, messages.SUCCESS, 
+    #             'Expense added!'
+    #         )
+    #         return redirect('expense_tool')
+    # else: 
+    #     expense_form = ExpenseForm()
+
+    # return render(request, 'expense/add.html', {'expense_form': expense_form})
 
 
 
@@ -66,25 +95,53 @@ def edit(request, edit_id):
 
     expense = get_object_or_404(Expense, pk=edit_id, user=request.user)
 
+    # Get the existing expenses for the logged in user, excluding the current one
+    expenses = Expense.objects.filter(user=request.user).exclude(pk=edit_id)
+    existing_currency = None
+    if expenses.exists():
+        existing_currency = expenses.first().currency
+
     # POST: Will submit the expense form and edits and existing expense to the database
     if request.method == "POST": 
         expense_form = ExpenseForm(data=request.POST, instance=expense)
         if expense_form.is_valid():
-            expense_form.save()
-            messages.success(request, 'Expense Updated!')
-            return HttpResponseRedirect(reverse("expense_tool"))
+            updated_expense = expense_form.save(commit=False)
+
+            # Check if the updated expense currency matches the exisiting one
+            if existing_currency and updated_expense.currency != existing_currency:
+                messages.error(
+                    request,
+                    f"You cannot mix different currencies. Your current expenses are in {existing_currency}."
+                )
+            else:
+                updated_expense.save()
+                messages.success(request, 'Expense Updated!')
+                return HttpResponseRedirect(reverse("expense_tool"))
         else:
             messages.error(request, "Error updating expense!")
     else: 
         expense_form = ExpenseForm(instance=expense)
-    
+
     return render(
         request, 'expense/edit.html',
-        {'form': expense_form, 'edit_id': edit_id}
-        # edit_id is the unique ID of the expense thats being edited.
+        {'form':expense_form, 'edit_id': edit_id}
     )
 
-    return render(request, 'expense/edit.html')
+    #         expense_form.save()
+    #         messages.success(request, 'Expense Updated!')
+    #         return HttpResponseRedirect(reverse("expense_tool"))
+    #     else:
+    #         messages.error(request, "Error updating expense!")
+    # else: 
+    #     expense_form = ExpenseForm(instance=expense)
+    
+    # return render(
+    #     request, 'expense/edit.html',
+    #     {'form': expense_form, 'edit_id': edit_id}
+        # edit_id is the unique ID of the expense thats being edited.
+    # )
+
+    # return render(request, 'expense/edit.html')
 
 def delete(request, expense_id):
 
