@@ -1,4 +1,4 @@
-/* body {
+ /* body {
     background-color: #F9FAFC;
 }
 
@@ -19,7 +19,7 @@
 
 .main-bg {
     background-color: #F9FAFC;
-}
+} */
 
 /* Expenses */
 
@@ -28,8 +28,13 @@
 }
 
 .item {
-    border: red solid;
+    border: black 1px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    padding: 10px;
 } 
+
+.item-name { 
+    padding-left: 15px;
+}
 
