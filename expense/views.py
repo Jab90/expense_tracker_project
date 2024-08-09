@@ -71,20 +71,6 @@ def add(request):
 
     return render(request, 'expense/add.html', {'expense_form': expense_form})
 
-    #         expense = expense_form.save(commit=False)
-    #         expense.user = request.user
-    #         expense.save()
-    #         messages.add_message(
-    #             request, messages.SUCCESS, 
-    #             'Expense added!'
-    #         )
-    #         return redirect('expense_tool')
-    # else: 
-    #     expense_form = ExpenseForm()
-
-    # return render(request, 'expense/add.html', {'expense_form': expense_form})
-
-
 
 def edit(request, edit_id):
 
@@ -126,22 +112,6 @@ def edit(request, edit_id):
         request, 'expense/edit.html',
         {'form':expense_form, 'edit_id': edit_id}
     )
-
-    #         expense_form.save()
-    #         messages.success(request, 'Expense Updated!')
-    #         return HttpResponseRedirect(reverse("expense_tool"))
-    #     else:
-    #         messages.error(request, "Error updating expense!")
-    # else: 
-    #     expense_form = ExpenseForm(instance=expense)
-    
-    # return render(
-    #     request, 'expense/edit.html',
-    #     {'form': expense_form, 'edit_id': edit_id}
-        # edit_id is the unique ID of the expense thats being edited.
-    # )
-
-    # return render(request, 'expense/edit.html')
 
 def delete(request, expense_id):
 
