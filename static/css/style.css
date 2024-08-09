@@ -22,6 +22,16 @@
     background-color: #F9FAFC;
 }
 
+/* Background image on home page (index.html) */
+
+.bg-custom {
+    background-image: url('../images/bg_img.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    min-width: 100%;
+}
+
 /* Expenses */
 
 .list { 
