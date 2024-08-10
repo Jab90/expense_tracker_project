@@ -121,4 +121,17 @@ To safeguard user data within the expenses tracking app, it is crucial to implem
 
 Managing and validating expenses are key functions of the app that ensure the accuracy and reliability of financial information. This epic is dedicated to equipping users with comprehensive tools for expense management, including options to add, edit and delete expenses. The app also requires validation mechanisms to confirm the accuacy of the expense data entered by users this goes for the base currency selected to, so if a user has selected GBP for example they cannot select USD and add another expense, the app will throw up and error telling the user to select the same currency. By enabling precise and reliable expense tracking, this epic aims to empower users to make informed financial decisions and effectively achieve their financial goals. 
 
+- [User Story Track Expenses [#1]](https://github.com/Jab90/expense_tracker_project/issues/1)
+- [User Story Edit Expenses [#3]](https://github.com/Jab90/expense_tracker_project/issues/3)
+- [User Story Validate Expenses [#5]](https://github.com/Jab90/expense_tracker_project/issues/5)
+- [User Story Total Costs [#6]](https://github.com/Jab90/expense_tracker_project/issues/6)
+- [User Story Save Feature For Each User [#9]](https://github.com/Jab90/expense_tracker_project/issues/9)
+- [User Story Delete Expenses [#4]](https://github.com/Jab90/expense_tracker_project/issues/4)
+- [User Story Currency Choice [#7]](https://github.com/Jab90/expense_tracker_project/issues/7)
 
+### User Experience, Interface and Feeback
+
+This epic is dedicated to reinfing the app's user interface to create a clean, intuitive, and easy to navigate experience. It addresses the user's need for a streamlined design that enhances usability. Additionally, this epic focuses on incorporating feeback mechanisms, such as notifications when users add, edit or delete and expense. A confirmation modal will also be introduced when the delete button is clicked, prompting users to confirm before an expense is permanently removed. By prioritising UI imporvements and user feedback, this epic seeks to enhance overall user satisfaction and improve the app's usability. 
+
+- [User Story UI [#8]](https://github.com/Jab90/expense_tracker_project/issues/8)
+- [User Story User Feedback [#10]](https://github.com/Jab90/expense_tracker_project/issues/10)
