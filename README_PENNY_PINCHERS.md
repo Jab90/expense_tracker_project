@@ -104,5 +104,21 @@ The Kanban Board provided a visual overview of the project's progress and facili
 
 ### User Stories
 
+User stories played a vital role in the development process, it helped ensure the features were inline with the users needs, all of the user needs were written out onto the kanban project board, which helped guide tasks being implemented and what to prioritse. 
+
+### Task Management 
+
+In addition to tracking user stories, the kanban board functioned as a detailed task list. I used it to break down user stories into smaller, actionable tasks, ensuring clear and manageable objectives for development. This granular approach allowed for efficient progress tracking. 
+By applying agile principles and effectively utilising the kanban board, the development of Penny Pinchers remained focused, adaptable, and responsive to changing requirements, resulting in a more robust and user-centered Django expense application. 
+
+### User Authentication and Authorisation 
+
+To safeguard user data within the expenses tracking app, it is crucial to implement strong authentication and authorisation systems. This epic focuses on securing user access to their accounts while preventing unauthorised entry/access. Through user authentication, individuals can log in to their accounts using unique credentials, such as usernames and passwords. User authorisation further ensures that only authenticated users have the necessary permissions to access specific features and data within the app. This epic highlights the importance of creating a secure entry and exit process for the app.
+
+- [User Story #11 Authorisation](https://github.com/users/Jab90/projects/4?pane=issue&itemId=73017867)
+
+### Expense Management and Validation 
+
+Managing and validating expenses are key functions of the app that ensure the accuracy and reliability of financial information. This epic is dedicated to equipping users with comprehensive tools for expense management, including options to add, edit and delete expenses. The app also requires validation mechanisms to confirm the accuacy of the expense data entered by users this goes for the base currency selected to, so if a user has selected GBP for example they cannot select USD and add another expense, the app will throw up and error telling the user to select the same currency. By enabling precise and reliable expense tracking, this epic aims to empower users to make informed financial decisions and effectively achieve their financial goals. 
 
 
