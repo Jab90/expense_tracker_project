@@ -18,7 +18,7 @@ The Penny Pinchers Expenses app is designed to allow users to organise, edit, di
 # Table of Contents 
 
 1. [ UX/UI ](#UX/UI)
-2. []
+2. [ Agile Methodology ](#agile-methodology)
 3.
 4.
 5.
@@ -64,14 +64,45 @@ The ultimate goal for these users is for them to gain better control over their 
 ## Wireframes
 
 I used Balsamic to create my wireframes. The final product does look slightly different to the original outlay which I feel in the design stages early on is quite normal as it was good to use for a guide/template to follow.
+As you will see below I have included screen shots of the simple design layout I was going for and the final product isn't too far off this.
 
+This is the Home page outlay I was looking to go with as a simple design:
 
+![Desktop Wireframe View 1](/static/images/readme/desktop_wireframe1.png)
+
+The same outlay was created in the wireframes as you can see from the sign in page below: 
+
+![Sign In Page](/static/images/readme/desktop_signin.png)
+
+Followed by the register page for users that don't have an account: 
+
+![Register Page](/static/images/readme/desktop_register.png)
+
+Now below you will see the outlay I wanted to create with the expense page, I wanted it to be simple and clear for the user, with a lot of the buttons all based around the centre of the page so it stops the user from looking all around the page for all the features as they are all in the centre together:
+
+![Expense Page](/static/images/readme/desktop_expenses.png)
+
+I then went on to design a simple mobile view of how I would like the app to look like and these are the wireframes you see below: 
+
+![Mobile View Page 1](/static/images/readme/mobile1.png) ![Mobile View Page 2](/static/images/readme/mobile2.png)
+
+#### [ Back to Top](#table-of-contents)
 
 
 
 # Agile Methodology 
 
-When developing this app an agile approach has been taken throughout this project. I broke each instance down into smaller User stories so they were refined into more manageable tasks therefore each User story has different acceptance criterias. The link to the kanban board for the User Stories can be found [HERE]. By doing this it has made it easier for me to buld the project. 
+When developing this app an agile approach has been taken throughout this project. I adapted and agile methodology to ensure an efficient and continual progress was being made. I broke each instance down into smaller user stories so they were refined into more manageable tasks therefore each user story has different acceptance criterias. The link to the kanban board for the User Stories can be found [here](https://github.com/users/Jab90/projects/4).
 
-# User Stories
+## Kanban Board Overview
+
+The Kanban Board provided a visual overview of the project's progress and facilitated efficient task management. It was organised into the following sections: 
+
+- **Todo:** This section contained all the tasks that needed to be done for the project to be completed and done. 
+- **In Progress:** The in progress section indicated active tasks that were being worked on. 
+- **Done:** The done section are the tasks that were completed successfully. 
+
+### User Stories
+
+
 
