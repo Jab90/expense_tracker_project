@@ -165,3 +165,63 @@ This epic is dedicated to reinfing the app's user interface to create a clean, i
 ![Navbar](/static/images/readme/Footer.png)
 
 ![Navbar Mobile](/static/images/readme/mobilenav_hamburger.png)     ![Navbar Mobile Dropdown](/static/images/readme/mobilenav_dropdown.png)
+
+## Register Page: 
+
+- Signs up new users and redirects them to the expenses tool page once logged in. 
+- Secure sign up fuctionality allowing users to register securely.
+
+![Sign Up Page](/static/images/readme/signup.png)
+
+## Login Page: 
+
+- Secure sign in functionality allowing existing users to sign into their account. 
+- After a user logs in successfully they get redirected to the expense page. 
+
+![Login Page](/static/images/readme/login.png)
+
+## Sign Out: 
+
+- Secure sign out procedure getting the user to confirm their sign out. 
+- Once signed out they can see the confirmation as they get redirected to the login page. 
+
+![Sign Out Page](/static/images/readme/sign_out.png)
+
+![Sign Out Confirmation](/static/images/readme/sign_out_confirmation.png)
+
+## Expenses Page: 
+
+- The user can only see and gain access to this page once they have been authenticated.
+- User can straight away start using the expenses app as it pops up after login. 
+
+![Expenses Page](/static/images/readme/expenses_login.png)
+
+- From here you can add, delete and edit existing expenses. When you click the "Add Expense" button you're redirected to the following page: 
+
+![Add Expense Page](/static/images/readme/add_expense.png)
+
+- When adding an expense you can only use one currency otherwise the app throws up an error, so no cross currency mixing can be done. The following error will show:
+
+![Expense Currency Error](/static/images/readme/expense_currency_error.png)
+
+- You can edit an existing expense whether its the item name, currency, or amount.
+
+![Edit and Expense](/static/images/readme/edit_expense.png)
+
+- Users can delete an expense, but this will have a confirmation modal pop up to confirm the action the user wants to take. 
+
+![Delete Modal Pop Up](/static/images/readme/delete_modal.png)
+
+- Users can see their total costs at the bottom of all of their expenses. 
+
+![Total Costs](/static/images/readme/total_costs.png)
+
+## User Friendly Interface: 
+
+- With the overall layout of the web app users can navigate their way around simply, as the layout is clear and concise which was a goal from the start of building this web app. 
+
+![Layout](/static/images/readme/layout.png)
+
+## Responsive Design: 
+
+## Additional Security Features: 
