@@ -19,7 +19,7 @@ The Penny Pinchers Expenses app is designed to allow users to organise, edit, di
 
 1. [ UX/UI ](#UX/UI)
 2. [ Agile Methodology ](#agile-methodology)
-3.
+3. [ Features ](#features)
 4.
 5.
 6.
@@ -135,3 +135,33 @@ This epic is dedicated to reinfing the app's user interface to create a clean, i
 
 - [User Story UI [#8]](https://github.com/Jab90/expense_tracker_project/issues/8)
 - [User Story User Feedback [#10]](https://github.com/Jab90/expense_tracker_project/issues/10)
+
+# Features
+
+## Home Page: 
+
+- Register and login hyperlinks on main splash page with a background image.
+- If user is already logged in then can choose to logout or carry on adding expenses.
+- Both logged in and non authorised users have access to the about me page. 
+- Banner at the top tells the person browsing the site if they are logged in or not. (This feature is accross all pages)
+
+![Home Page](/static/images/readme/home_page.png)
+
+## About Page:
+
+- Brief desciption of what Penny Pinchers is all about.
+- Includes a small logo next to the text.
+- Accessible without the need to login or user authentication. 
+
+![About Page](/static/images/readme/about_page.png)
+
+## Navbar and Footer: 
+
+- Navigation links at the top of the page allows the user to navigate through the website easily. On mobile theres a hamburger menu that appears and with one tap the nav bar drops down with the navigation links. 
+- Social media links on the footer take you to the social media platforms listed. 
+
+![Navbar](/static/images/readme/Navbar.png)     
+
+![Navbar](/static/images/readme/Footer.png)
+
+![Navbar Mobile](/static/images/readme/mobilenav_hamburger.png)     ![Navbar Mobile Dropdown](/static/images/readme/mobilenav_dropdown.png)
