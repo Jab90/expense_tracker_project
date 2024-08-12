@@ -21,7 +21,7 @@ The Penny Pinchers Expenses app is designed to allow users to organise, edit, di
 2. [ Agile Methodology ](#agile-methodology)
 3. [ Features ](#features)
 4. [ Future Features ](#future-features)
-5.
+5. [ Design ](#design)
 6.
 7.
 8.
@@ -264,3 +264,9 @@ The relationships for this mock up would be the following:
 8. A budget belongs to one category (many-to-one). 
 
 ##### [ Back To Top ](#table-of-contents)
+
+# Design:
+
+## Colour 
+
+

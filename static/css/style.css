@@ -25,7 +25,7 @@
 /* Background image on home page (index.html) */
 
 .bg-custom {
-    background-image: url('../images/bg_img.png');
+    background-image: url('https://res.cloudinary.com/dq06nhp6z/image/upload/v1723457649/penny_pinchers_home_img_j6lh1l.jpg');
     background-size: cover;
     background-position: center;
     min-height: 100vh;
