@@ -20,7 +20,7 @@ The Penny Pinchers Expenses app is designed to allow users to organise, edit, di
 1. [ UX/UI ](#UX/UI)
 2. [ Agile Methodology ](#agile-methodology)
 3. [ Features ](#features)
-4.
+4. [ Future Features ](#future-features)
 5.
 6.
 7.
@@ -224,4 +224,43 @@ This epic is dedicated to reinfing the app's user interface to create a clean, i
 
 ## Responsive Design: 
 
+- The website is responsive ensuring users will have usability of the web app across various screen sizes. 
+- When the screen is smaller the navbar collapses into a hamburger buttton for improved UI and navigation on smaller screens. 
+- Images are responsive to so they are inline with the screen size being shown. 
+
+![Responsive Mobile Design - Home Page](/static/images/readme/mobile_home.png)
+
 ## Additional Security Features: 
+
+- Users coming to the web app aren't able to manipulate the URL to try gain access to someone elses account.
+- Users only have direct access to their own account and expenses. 
+- Users are redirected to the sign in page if trying to log in with the wrong credentials with an error message, errors will flag up if mandatory fields are left empty. 
+
+![Additional Security](/static/images/readme/empty_field_error.png)
+
+##### [ Back To Top ](#table-of-contents)
+
+# Future Features: 
+
+- Potentially getting a currency converter api linked to the backend, so if there's a mixture of currencies the user can add the currencies and the web app will automatically calculate the current price conversion and add it to the total expenses. 
+- Have a more analytical view with graphs and charts to help the user with a more visual look as to where their money is going. 
+- Add all the currencies in the world to choose from. 
+- Reminders for certain bills or payments coming up. 
+- Having a budgeting, investment and savings sector so users can split their different budgets how they feel. 
+
+Below is an improved ERD mock up that I think would help with building a more improved version of the app. 
+
+![Improved ERD](/static/images/readme/improved_ERD.png)
+
+The relationships for this mock up would be the following: 
+
+1. A user can have many expenses (one-to-many).
+2. An expense belongs to one user (many-to-one).
+3. A category can have many expenses (one-to many).
+4. An expense belongs to one category (many-to-one).
+5. A user can have many budgets (one-to-many).
+6. A budget belongs to one user (many-to-one).
+7. A category can have many budgets (one-to-many).
+8. A budget belongs to one category (many-to-one). 
+
+##### [ Back To Top ](#table-of-contents)
