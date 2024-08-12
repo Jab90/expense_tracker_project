@@ -267,6 +267,16 @@ The relationships for this mock up would be the following:
 
 # Design:
 
-## Colour 
+## Colour:
+
+![Colour WCAG](/static/images/readme/colours1.png)  ![Colour WCAG 2](/static/images/readme/colours2.png)
+
+The Penny Pinchers App adopts a light colour scheme to provide users with a clear and concise look with an easy to understand UI. 
+
+# Testing and Validation: 
+
+
+
+
 
 
