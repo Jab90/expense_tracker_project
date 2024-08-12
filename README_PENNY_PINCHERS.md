@@ -22,8 +22,8 @@ The Penny Pinchers Expenses app is designed to allow users to organise, edit, di
 3. [ Features ](#features)
 4. [ Future Features ](#future-features)
 5. [ Design ](#design)
-6.
-7.
+6. [ Testing and Validation ](#testing-and-validation)
+7. [ Technology Stack Used ](#technology-stack-used)
 8.
 9.
 10.
@@ -274,6 +274,39 @@ The relationships for this mock up would be the following:
 The Penny Pinchers App adopts a light colour scheme to provide users with a clear and concise look with an easy to understand UI. 
 
 # Testing and Validation: 
+
+# Technology Stack Used:
+
+- HTML - Used for page structure.
+- CSS - Custom styling.
+- Bootstrap - Frontend Framework used for custom styling and responsive development.
+- Javascript - For the delete pop up modal.
+- Python - For backend. 
+- Django - Frame work to build this web app. 
+- Heroku PostgreSQL - Used as the database.
+- Heroku - For hosting the deployment of this project. 
+- Balsamiq - For wireframes.
+- Font Awesome - For social media icons.
+- Lucidchart - For Entity Relationship Diagrams (ERD).
+- Freepik - For free stock images
+- Google Images - Penny Pincher image (on about page).
+- Google fonts - For custom font styling. 
+- GitHub - Used for storing code, and Kanban board. 
+- GitPod - Used for coding the whole projet. 
+- Cloudinary - Used for hosting the static files for images. 
+- Git - for version control. 
+- PEP8 - This was used to validate all the python code. 
+- W3C: HTML - Validator for all the HTML code.
+- W3C: CSS - Validator for all the CSS code. 
+- Google Chrome Dev Tools - Helpful for debugging, fixing errors and checking app responsiveness. 
+
+## Django Packages: 
+
+- Allauth: Used for authentication, registration and account management. 
+- Crispy Forms: To style the forms. 
+- Dj_database_url:  To parse the database URL from the environment variables in Heroku.
+- Gunicorn: Used as the server for Heroku. 
+- Psycopg2: An adaptor for use in python. 
 
 
 
