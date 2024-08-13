@@ -25,7 +25,7 @@ The Penny Pinchers Expenses app is designed to allow users to organise, edit, di
 6. [ Testing and Validation ](#testing-and-validation)
 7. [ Technology Stack Used ](#technology-stack-used)
 8. [ Bugs ](#bugs)
-9.
+9. [ Deployment ](#deployment)
 10.
 
 # UX/UI
