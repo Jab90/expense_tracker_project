@@ -439,6 +439,36 @@ Below is a result of the Register page desktop and mobile lighthouse test:
 
 ![Lighthouse Register Page test (Mobile)](/static/images/readme/lighthouse_mobile_register.png)
 
+Below is a result of the Login page desktop and mobile lighthouse test: 
+
+#### Desktop
+
+![Lighthouse Login Page test (Desktop)](/static/images/readme/lighthouse_desktop_login.png)
+
+#### Mobile 
+
+![Lighthouse Login Page test (Mobile)](/static/images/readme/lighthouse_mobile_login.png)
+
+Below is a result of the Expenses page desktop and mobile lighthouse test: 
+
+#### Desktop
+
+![Lighthouse Expenses test (Desktop)](/static/images/readme/lighthouse_desktop_expenses.png)
+
+#### Mobile 
+
+![Lighthouse Expenses test (Mobile)](/static/images/readme/lighthouse_mobile_expenses.png)
+
+Below is a result of the Logout page desktop and mobile lighthouse test: 
+
+#### Desktop
+
+![Lighthouse Expenses test (Desktop)](/static/images/readme/lighthouse_desktop_logout.png)
+
+#### Mobile 
+
+![Lighthouse Expenses test (Mobile)](/static/images/readme/lighthouse_mobile_logout.png)
+
 
 ##### [ Back To Top ](#table-of-contents)
 
