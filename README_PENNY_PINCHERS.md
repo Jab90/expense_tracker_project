@@ -24,7 +24,7 @@ The Penny Pinchers Expenses app is designed to allow users to organise, edit, di
 5. [ Design ](#design)
 6. [ Testing and Validation ](#testing-and-validation)
 7. [ Technology Stack Used ](#technology-stack-used)
-8.
+8. [ Bugs ](#bugs)
 9.
 10.
 
@@ -472,11 +472,21 @@ Below is a result of the Logout page desktop and mobile lighthouse test:
 
 ##### [ Back To Top ](#table-of-contents)
 
+# Bugs 
 
+No major bugs to report, however theres a couple of styling issues, one of which appears for me in my browers but for everyone else that has used/tested the web app it seems to be fine. This issue is the buttons on the expenses page not lining up correctly. However for other users it seems to line up perfectly fine. The difference can be seen below in the images, this happens both on mobile and desktop. 
 
+This is how the app buttons appear for me : 
 
+![Button Bug](/static/images/readme/button_bug.png)
 
+This is how the app buttons appear on someone else's desktop (mobile view):
 
+![Button No Bug](/static/images/readme/button_nobug.png)
+
+Another issue was the image on the about me page, when the screen gets small the image shrinks quite a fair bit i think it would be better if a media query had been used to hide the image when it gets below a certain screen size. 
+
+![Image Bug](/static/images/readme/image_bug.png)
 
 
 # Technology Stack Used:
@@ -512,7 +522,42 @@ Below is a result of the Logout page desktop and mobile lighthouse test:
 - Gunicorn: Used as the server for Heroku. 
 - Psycopg2: An adaptor for use in python. 
 
+# Deployment 
 
+## Deployment Guide For Penny Pinchers Expense Web App
+
+### Deployment Steps: 
+
+#### Creating The Heroku App
+
+- Sign up or log in to [Heroku](https://id.heroku.com).
+- Go to the Heroku dashboard and click on 'New' and 'Create New App'.
+- Choose a unique name for your project e.g " Penny Pinchers". 
+- If you're based in the EU region then select EU. 
+- Click 'Create App'.
+- Go to the 'Deploy' tab and choose GitHub as the deployment method. 
+- Connect your GitHub account and connect it with the new repository (this would have been created before these steps).
+
+#### Setting Up Environment Variables
+
+- Create an env.py in the base level directory of the Django app. 
+- Import os in env.py. 
+- Set up the necessary environment variables in env.py, including the SECRET_KEY and DATABASE_URL. 
+- Update the settings.py file so it can use the environment variables for SECRET_KEY and DATABASE_URL.
+- Configure environment variables in Heroku under the settings tab and then go to 'Config Vars'.
+- Migrate models onto the new database connection in the terminal. 
+- Back to the settings.py file, configure static files and template directories. 
+- In the ALLOWED_HOSTS list add Heroku. 
+
+#### Pushing Changes and Creating A Procfile 
+
+- Create a Procfile in the base level directory.
+- Add the command needed to run the project in the Procfile. 
+- Add, Commit and Push these changes to GitHub. 
+
+#### Heroku Deployment 
+
+- 
 
 
 
