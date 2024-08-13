@@ -409,6 +409,11 @@ The admin panel is there for admins and owners of the web app to have access to 
 
 ### Lighthouse Testing
 
+Below is a result of the home page desktop and mobile lighthouse test: 
+
+#### Desktop
+
+![Lighthouse Home Page test (Desktop)](/static/images/readme/lighthouse_desktop_home.png)
 
 
 ##### [ Back To Top ](#table-of-contents)
