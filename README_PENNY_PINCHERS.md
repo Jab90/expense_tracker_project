@@ -1,6 +1,6 @@
 ![Add image Here]
 
-# Weclome to Penny Pinchers Expenses App
+# Welcome to Penny Pinchers Expenses App
 
 ## A Expenses App To Help You Manage Your Finances
 ### Penny Pinchers helps people to manage their expenses and see how much they are spending! 
@@ -138,7 +138,7 @@ This epic is dedicated to reinfing the app's user interface to create a clean, i
 
 # Features
 
-## Home Page: 
+## Home Page
 
 - Register and login hyperlinks on main splash page with a background image.
 - If user is already logged in then can choose to logout or carry on adding expenses.
@@ -147,7 +147,7 @@ This epic is dedicated to reinfing the app's user interface to create a clean, i
 
 ![Home Page](/static/images/readme/home_page.png)
 
-## About Page:
+## About Page
 
 - Brief desciption of what Penny Pinchers is all about.
 - Includes a small logo next to the text.
@@ -155,7 +155,7 @@ This epic is dedicated to reinfing the app's user interface to create a clean, i
 
 ![About Page](/static/images/readme/about_page.png)
 
-## Navbar and Footer: 
+## Navbar and Footer
 
 - Navigation links at the top of the page allows the user to navigate through the website easily. On mobile theres a hamburger menu that appears and with one tap the nav bar drops down with the navigation links. 
 - Social media links on the footer take you to the social media platforms listed. 
@@ -166,21 +166,21 @@ This epic is dedicated to reinfing the app's user interface to create a clean, i
 
 ![Navbar Mobile](/static/images/readme/mobilenav_hamburger.png)     ![Navbar Mobile Dropdown](/static/images/readme/mobilenav_dropdown.png)
 
-## Register Page: 
+## Register Page
 
 - Signs up new users and redirects them to the expenses tool page once logged in. 
 - Secure sign up fuctionality allowing users to register securely.
 
 ![Sign Up Page](/static/images/readme/signup.png)
 
-## Login Page: 
+## Login Page
 
 - Secure sign in functionality allowing existing users to sign into their account. 
 - After a user logs in successfully they get redirected to the expense page. 
 
 ![Login Page](/static/images/readme/login.png)
 
-## Sign Out: 
+## Sign Out
 
 - Secure sign out procedure getting the user to confirm their sign out. 
 - Once signed out they can see the confirmation as they get redirected to the login page. 
@@ -189,7 +189,7 @@ This epic is dedicated to reinfing the app's user interface to create a clean, i
 
 ![Sign Out Confirmation](/static/images/readme/sign_out_confirmation.png)
 
-## Expenses Page: 
+## Expenses Page
 
 - The user can only see and gain access to this page once they have been authenticated.
 - User can straight away start using the expenses app as it pops up after login. 
@@ -216,21 +216,13 @@ This epic is dedicated to reinfing the app's user interface to create a clean, i
 
 ![Total Costs](/static/images/readme/total_costs.png)
 
-## User Friendly Interface: 
+## User Friendly Interface
 
 - With the overall layout of the web app users can navigate their way around simply, as the layout is clear and concise which was a goal from the start of building this web app. 
 
 ![Layout](/static/images/readme/layout.png)
 
-## Responsive Design: 
-
-- The website is responsive ensuring users will have usability of the web app across various screen sizes. 
-- When the screen is smaller the navbar collapses into a hamburger buttton for improved UI and navigation on smaller screens. 
-- Images are responsive to so they are inline with the screen size being shown. 
-
-![Responsive Mobile Design - Home Page](/static/images/readme/mobile_home.png)
-
-## Additional Security Features: 
+## Additional Security Features
 
 - Users coming to the web app aren't able to manipulate the URL to try gain access to someone elses account.
 - Users only have direct access to their own account and expenses. 
@@ -240,7 +232,7 @@ This epic is dedicated to reinfing the app's user interface to create a clean, i
 
 ##### [ Back To Top ](#table-of-contents)
 
-# Future Features: 
+# Future Features
 
 - Potentially getting a currency converter api linked to the backend, so if there's a mixture of currencies the user can add the currencies and the web app will automatically calculate the current price conversion and add it to the total expenses. 
 - Have a more analytical view with graphs and charts to help the user with a more visual look as to where their money is going. 
@@ -265,9 +257,17 @@ The relationships for this mock up would be the following:
 
 ##### [ Back To Top ](#table-of-contents)
 
-# Design:
+# Design
 
-## Colour:
+## Responsive Design
+
+- The website is responsive ensuring users will have usability of the web app across various screen sizes. 
+- When the screen is smaller the navbar collapses into a hamburger buttton for improved UI and navigation on smaller screens. 
+- Images are responsive to so they are inline with the screen size being shown. 
+
+![Responsive Mobile Design - Home Page](/static/images/readme/mobile_home.png)
+
+## Colour
 
 ![Colour WCAG](/static/images/readme/colours1.png)  ![Colour WCAG 2](/static/images/readme/colours2.png)
 
@@ -337,6 +337,88 @@ An issue that was commonly coming up in the python validator is the lines of cod
 | expense_tracker | wsgi.py | &#10004; |
 
 ## Manual Testing
+
+### Test Navigation When Logged In 
+
+| **Test** | **Expected Outcome** | **Result** | 
+|---|---|---|
+| Click on logout button | User gets logged out and redirected to the login page. | &#10004;
+| Navigate to home page when clicking on logo or home | The home page telling a user to sign in or register is loaded | &#10004;
+| Expense tab appears | Expense tab appears when user is logged in and loads their expenses if they have any already saved as soon as they log in | &#10004;
+
+### Test Navigation When Not Logged In 
+
+| **Test** | **Expected Outcome** | **Result** | 
+|---|---|---|
+| Absence of Expense Navbar link | No expense tab can be seen as user is not logged in, however can see Register, Sign in, About and Home. | &#10004;
+| Clickable log in tab | Redirected to the login page.  | &#10004;
+| Clickable register tab | Redirected to the register page. | &#10004;
+| New user signed up | New account created and redirected to the expense_tool page | &#10004;
+| New user sign up details | A new user has to input the correct criteria for username and password otherwise can't sign up. | &#10004;
+
+### Test Login Status 
+
+| **Test** | **Expected Outcome** | **Result** | 
+|---|---|---|
+| Logged in message | When the user is logged in a message on the top right just below the navbar will show as username is logged in. | &#10004;
+| Not logged in message | When the user is not logged in there will be a message just below the navbar saying "You are not logged in" | &#10004;
+
+### Test Adding An Expense 
+
+| **Test** | **Expected Outcome** | **Result** | 
+|---|---|---|
+| On clicking "Add Expense" button | Redirected to add expense page with a form displayed to enter expense details. | &#10004;
+| Filling out the expense form | The expense is added to the database successfully. | &#10004;
+| Verifying the new expense is added | The new expense is visibile in the expense list. | &#10004;
+| Filling out the expense form with invalid syntax/data | An error message is displayed indicating an invalid input. | &#10004;
+| Filling out expense with a different currency | An error message is displayed indicating the base currency chosen.| &#10004;
+| Submitting the form with incomplete or no data | An error message is displayed, indicating all fields are required | &#10004;
+| Add expense notification | After a user adds their expense, a confirmation message appears at the top of the page. | &#10004;
+
+### Test Edit An Expense 
+
+| **Test** | **Expected Outcome** | **Result** | 
+|---|---|---|
+| On clicking the "Edit" button | Redirected to edit expense page with the form displaying the existing populated expense details. | &#10004;
+| Modifying expense details | Changes are successfull saved to the database, currency value has to stay the same. | &#10004;
+| Verifying the changes | Changes are reflected in the expense list. | &#10004;
+| Submitting the form unchanged | The expense remains the same value as before. | &#10004;
+| Edit expense notification | After a user edits their expense, a confirmation message appears at the top of the page. | &#10004;
+
+### Test Delete An Expense
+
+| **Test** | **Expected Outcome** | **Result** | 
+|---|---|---|
+| On clicking the "Delete" button | The delete Modal is pops up and is displayed. | &#10004;
+| Confirm deleting an expense | The expense is successfully deleted from the list and database. | &#10004;
+| Confirmation of the deletion | The deleted expense is no longer in the list. | &#10004;
+| Cancel delete on modal pop up | Expense remains, and is unchanged in the list and database. | &#10004;
+| On clicking the "Delete" button | The delete Modal is pops up and is displayed. | &#10004;
+| Delete expense notification | After a user deletes their expense, a confirmation message appears at the top of the page. | &#10004;
+
+### Testing The Admin Panel
+
+The admin panel is there for admins and owners of the web app to have access to the backend, access will be granted to those that have a superuser account. 
+
+| **Test** | **Expected Outcome** | **Result** | 
+|---|---|---|
+| Log in as Superuser/Admin | Displays the Django admin database panel | &#10004;
+| Add an expense | Create a new expense in the database | &#10004;
+| Edit an expense | Edit the details of an expense and save the changes. | &#10004;
+| Delete an expense | Delete the details of an expense. | &#10004;
+
+### Lighthouse Testing
+
+
+
+##### [ Back To Top ](#table-of-contents)
+
+
+
+
+
+
+
 
 # Technology Stack Used:
 
