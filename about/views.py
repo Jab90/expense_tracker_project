@@ -3,6 +3,7 @@ from .models import About
 
 # Create your views here.
 
+
 def about_me(request):
     """
     Renders the About me page
@@ -11,7 +12,7 @@ def about_me(request):
     about = About.objects.all().order_by('-updated_on').first()
 
     return render(
-        request, 
+        request,
         "about/about.html",
         {"about": about},
     )

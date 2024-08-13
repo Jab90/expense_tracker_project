@@ -275,6 +275,69 @@ The Penny Pinchers App adopts a light colour scheme to provide users with a clea
 
 # Testing and Validation: 
 
+### HTML Validation
+
+To check the HTML files in this project the [W3C validator](https://validator.w3.org/) was used via the direct input feature in W3C Validator. The curly braces used for Django code came back as errors but this is expected as its not recognised as base HTML code from the software. 
+
+| **File**  | **Result** |
+|---|---|
+| base.html | &#10004; |
+| logout.html | &#10004; |
+| login.html | &#10004; |
+| signup.html | &#10004; |
+| **HTML Files Made:**|
+| index.html | &#10004; |
+| about.html | &#10004; |
+| add.html | &#10004; |
+| edit.html | &#10004; |
+| expense_tool.html | &#10004; |
+
+### CSS Validation
+
+The [Jigsaw W3C Validator](https://jigsaw.w3.org/css-validator) was used to check the CSS stylesheet. No errors were found. 
+
+![CSS Validator](/static/images/readme/css_validator.png)
+
+| **File**  | **Result** |
+|---|---|
+| style.css | &#10004; |
+
+### JavaScript Validation 
+
+To validate the JavaScript code used [JShint](https://jshint.com/) was used. 8 ES6 warnings cmae back and an undentified variable because of Bootstrap, I can ignore the Bootstrap error since Bootstrap is already implemented.
+
+![JS Validator](/static/images/readme/js_validator.png)
+
+| **File**  | **Result** |
+|---|---|
+| delete_expense.js | &#10004; |
+
+### Python Validation
+
+For checking the python code [CI Python Linter](https://pep8ci.herokuapp.com/) was used.
+
+![Python Validator](/static/images/readme/python_validator.png)
+
+An issue that was commonly coming up in the python validator is the lines of code were too long, so breaking some of the code up and changing it around helped with this, but in some places I felt it was necessary to just leave it as some of the code would stop working, as there would be a break somewhere also most of the time this error was from comments. 
+
+| **Project/App** | **File** | **Result** |
+|---|---|---|
+| about | modles.py | &#10004; |
+| about | admin.py | &#10004; |
+| about | urls.py | &#10004; |
+|---|---|---|
+| expense | admin.py | &#10004; |
+| expense | forms.py | &#10004; |
+| expense | models.py | &#10004; |
+| expense | urls.py | &#10004; |
+| expense | views.py | &#10004; |
+|---|---|---|
+| expense_tracker | settings.py | &#10004; |
+| expense_tracker | urls.py | &#10004; |
+| expense_tracker | wsgi.py | &#10004; |
+
+## Manual Testing
+
 # Technology Stack Used:
 
 - HTML - Used for page structure.

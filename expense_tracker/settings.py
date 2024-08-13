@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'django_summernote', 
+    'django_summernote',
     'crispy_forms',
     'crispy_bootstrap5',
     'expense',
@@ -112,9 +112,9 @@ WSGI_APPLICATION = 'expense_tracker.wsgi.application'
 #     }
 # }
 
-DATABASES = { 
-    'default': 
-dj_database_url.parse(os.environ.get("DATABASE_URL"))
+DATABASES = {
+    'default':
+    dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
 
@@ -136,7 +136,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-ACCOUNT_EMAIL_VERIFICATION ='none'
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
@@ -154,7 +154,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type

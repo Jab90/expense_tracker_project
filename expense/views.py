@@ -7,35 +7,38 @@ from django.contrib import messages
 from .models import Expense
 from .forms import ExpenseForm
 
+
 class HomePage(TemplateView):
     """
     Displays Home page"
     """
     template_name = "expense/index.html"
 
+
 def expense_tool(request):
 
     """
     Displays the expense tool page which houses the list of expenses
-    and the total sum of expenses, but can only access this page if 
+    and the total sum of expenses, but can only access this page if
     the user is logged in. (User authenticated).
     """
-    # A queryset that has all the expenses belonging to the user thats logged in. 
-    expenses = Expense.objects.filter(user=request.user) 
+    # A queryset that has all the expenses belonging to the user thats logged in.
+    expenses = Expense.objects.filter(user=request.user)
 
-    # The logged in users total amount of expenses. 
+    # The logged in users total amount of expenses.
     total_amount = sum(expense.amount for expense in expenses)
 
-    return render(request, 'expense/expense_tool.html',{
+    return render(request, 'expense/expense_tool.html', {
         "expenses": expenses,
         "total_amount": total_amount,
     })
+
 
 def add(request):
 
     """
     Page allows authenticated users to add a new expense to thier list.
-    Users who arent authenticated will not have access to this page. 
+    Users who arent authenticated will not have access to this page.
     """
 
     # Get the existing expenses for the logged-in user
@@ -47,7 +50,7 @@ def add(request):
     existing_currency = None
     if expenses.exists():
         existing_currency = expenses.first().currency
-    
+
     # POST: Will submit the expense form and adds a new expense to the database
     if request.method == 'POST':
         expense_form = ExpenseForm(data=request.POST)
@@ -66,7 +69,7 @@ def add(request):
                 messages.success(request, 'Expense Added!')
                 return redirect('expense_tool')
 
-    else: 
+    else:
         expense_form = ExpenseForm()
 
     return render(request, 'expense/add.html', {'expense_form': expense_form})
@@ -78,7 +81,6 @@ def edit(request, edit_id):
     Allows only authenticated users to edit exiting expenses on their list.
     """
 
-
     expense = get_object_or_404(Expense, pk=edit_id, user=request.user)
 
     # Get the existing expenses for the logged in user, excluding the current one
@@ -88,7 +90,7 @@ def edit(request, edit_id):
         existing_currency = expenses.first().currency
 
     # POST: Will submit the expense form and edits and existing expense to the database
-    if request.method == "POST": 
+    if request.method == "POST":
         expense_form = ExpenseForm(data=request.POST, instance=expense)
         if expense_form.is_valid():
             updated_expense = expense_form.save(commit=False)
@@ -105,13 +107,14 @@ def edit(request, edit_id):
                 return HttpResponseRedirect(reverse("expense_tool"))
         else:
             messages.error(request, "Error updating expense!")
-    else: 
+    else:
         expense_form = ExpenseForm(instance=expense)
 
     return render(
         request, 'expense/edit.html',
-        {'form':expense_form, 'edit_id': edit_id}
+        {'form': expense_form, 'edit_id': edit_id}
     )
+
 
 def delete(request, expense_id):
 
@@ -124,6 +127,6 @@ def delete(request, expense_id):
     if request.method == 'POST':
         expense.delete()
         messages.success(request, "Expense Deleted!")
-    
-    # After deleting, a redirection occurs to the expense tool page. 
+
+    # After deleting, a redirection occurs to the expense tool page.
     return redirect("expense_tool")
