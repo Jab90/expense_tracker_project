@@ -409,11 +409,35 @@ The admin panel is there for admins and owners of the web app to have access to 
 
 ### Lighthouse Testing
 
-Below is a result of the home page desktop and mobile lighthouse test: 
+Below is a result of the Penny Pinchers Home page desktop and mobile lighthouse test: 
 
 #### Desktop
 
 ![Lighthouse Home Page test (Desktop)](/static/images/readme/lighthouse_desktop_home.png)
+
+#### Mobile
+
+![Lighthouse Home Page test (Mobile)](/static/images/readme/lighthouse_mobile_home.png)
+
+Below is a result of the About page desktop and mobile lighthouse test: 
+
+#### Desktop
+
+![Lighthouse About Page test (Desktop)](/static/images/readme/lighthouse_desktop_about.png)
+
+#### Mobile 
+
+![Lighthouse About Page test (Mobile)](/static/images/readme/lighthouse_mobile_about.png)
+
+Below is a result of the Register page desktop and mobile lighthouse test: 
+
+#### Desktop
+
+![Lighthouse Register Page test (Desktop)](/static/images/readme/lighthouse_desktop_register.png)
+
+#### Mobile 
+
+![Lighthouse Register Page test (Mobile)](/static/images/readme/lighthouse_mobile_register.png)
 
 
 ##### [ Back To Top ](#table-of-contents)
