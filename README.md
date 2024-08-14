@@ -275,6 +275,7 @@ This is what a 'Super User' will see and have access to when they log in through
 # Future Features
 
 - Potentially getting a currency converter api linked to the backend, so if there's a mixture of currencies the user can add the currencies and the web app will automatically calculate the current price conversion and add it to the total expenses. 
+- When you have two or more with the same expense name the web app groups them together and adds it to the total, with a drop down showing you they've been grouped together.
 - Have a more analytical view with graphs and charts to help the user with a more visual look as to where their money is going. 
 - Add all the currencies in the world to choose from. 
 - Reminders for certain bills or payments coming up. 
