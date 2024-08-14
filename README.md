@@ -528,7 +528,7 @@ Another issue was the image on the about me page, when the screen gets small the
 
 ![Image Bug](/static/images/readme/image_bug.png)
 
-The web app is functioning how it should, however on the day of submission I did one final test and came across a new bug which I believe to be a bootstrap issue, but could be an issue with my modal that has been written to but this wasn't an issue before. The image below shows the issue: 
+The web app is functioning how it should, however on the day of submission I did one final test and came across a new bug which I believe to be a bootstrap issue, it could be an issue with my modal that has been written to but this wasn't an issue when it was working before. The image below shows the issue: 
 
 ![Bootstrap Dev Tools Issue](/static/images/readme/bug_error.png)
 
