@@ -514,7 +514,7 @@ Below is a result of the Logout page desktop and mobile lighthouse test:
 
 # Bugs 
 
-A couple of issues to report, one of which appears for me in my browers but for everyone else that has used/tested the web app it seems to be fine. This issue is the buttons on the expenses page not lining up correctly. However for other users it seems to line up perfectly fine. The difference can be seen below in the images, this happens both on mobile and desktop. 
+Some issues to report, one of which appears for me in my browers but for everyone else that has used/tested the web app it seems to be fine. This issue is the buttons on the expenses page not lining up correctly. However for other users it seems to line up perfectly fine. The difference can be seen below in the images, this happens both on mobile and desktop. 
 
 This is how the app buttons appear for me : 
 
@@ -528,7 +528,7 @@ Another issue was the image on the about me page, when the screen gets small the
 
 ![Image Bug](/static/images/readme/image_bug.png)
 
-The web app is functioning how it should, however on the day of submission I did one final test and came across a new bug which I found out to be a bootstrap issue, and not necessarily anything to do with code that has been written. The image below shows the issue: 
+The web app is functioning how it should, however on the day of submission I did one final test and came across a new bug which I believe to be a bootstrap issue, but could be an issue with my modal that has been written to but this wasn't an issue before. The image below shows the issue: 
 
 ![Bootstrap Dev Tools Issue](/static/images/readme/bug_error.png)
 
