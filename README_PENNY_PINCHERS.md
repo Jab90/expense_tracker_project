@@ -1,8 +1,8 @@
 ![Home Page for Documentation](/static/images/readme/homepage_documentation.png)
 
-# Welcome to Penny Pinchers Expenses App
+# Welcome To The Penny Pinchers Expenses App
 
-## A Expenses App To Help You Manage Your Finances
+## An Expenses App To Help You Manage Your Finances
 ### Penny Pinchers helps people to manage their expenses and see how much they are spending! 
 
 The Penny Pinchers Expenses app is designed to allow users to organise, edit, display and delete their expenses, which will help them long term to manage their finances. By just clicking the "Add expense" button and filling out the details a user can add thier costs to a list, later on down the line if they wish to the user can also delete or edit the list or expense. The user also gets a total of their expenses so they can be aware as to the exact number all their expenses come to. The web app allows only registered users to create thier own expenses tracker list. Users that aren't registered will not be able to use the expense tracker, but can register for an account and browse the about us page.
@@ -95,6 +95,19 @@ I then went on to design a simple mobile view of how I would like the app to loo
 
 When developing this app an agile approach has been taken throughout this project. I adapted and agile methodology to ensure an efficient and continual progress was being made. I broke each instance down into smaller user stories so they were refined into more manageable tasks therefore each user story has different acceptance criterias. The link to the kanban board for the User Stories can be found [here](https://github.com/users/Jab90/projects/4).
 
+## MoSCoW Prioritisation
+
+By utilising the MoSCoW prioritisation method in this project I was able to categorise my tasks into: 
+
+#### Must Haves
+- Essential use of the expenses app with full CRUD criteria.
+
+#### Should Haves
+- Features that are valuable however not crucial for the MVP of the project, these get given priority after the 'Must Haves'. 
+
+#### Could Haves
+- These would be additional features that would enhance the project however due to time constraints will take less priority, and would be looked into after high priority tasks are complete.
+
 ## Kanban Board Overview
 
 The Kanban Board provided a visual overview of the project's progress and facilitated efficient task management. It was organised into the following sections: 
@@ -103,9 +116,13 @@ The Kanban Board provided a visual overview of the project's progress and facili
 - **In Progress:** The in progress section indicated active tasks that were being worked on. 
 - **Done:** The done section are the tasks that were completed successfully. 
 
+![Project Board](/static/images/readme/project_board.png)
+
 ### User Stories
 
 User stories played a vital role in the development process, it helped ensure the features were inline with the users needs, all of the user needs were written out onto the kanban project board, which helped guide tasks being implemented and what to prioritse. 
+
+![Project Board List View](/static/images/readme/project_board_list.png)
 
 ### Task Management 
 
@@ -230,6 +247,28 @@ This epic is dedicated to reinfing the app's user interface to create a clean, i
 - Users are redirected to the sign in page if trying to log in with the wrong credentials with an error message, errors will flag up if mandatory fields are left empty. 
 
 ![Additional Security](/static/images/readme/empty_field_error.png)
+
+## Admin Panel 
+
+#### SuperUser View
+
+This is what a 'Super User' will see and have access to when they log in through the admin panel. 
+
+![Admin Panel](/static/images/readme/admin_panel.png)
+
+#### Users
+
+![Users Within Admin Panel](/static/images/readme/users_admin_panel.png)
+
+#### Expenses
+
+![Expenses From Admin Panel](/static/images/readme/expenses_admin_panel.png)
+
+#### About 
+
+![Abouts Admin Panel](/static/images/readme/abouts_admin_panel.png)
+
+
 
 ##### [ Back To Top ](#table-of-contents)
 
@@ -475,7 +514,7 @@ Below is a result of the Logout page desktop and mobile lighthouse test:
 
 # Bugs 
 
-No major bugs to report, however theres a couple of styling issues, one of which appears for me in my browers but for everyone else that has used/tested the web app it seems to be fine. This issue is the buttons on the expenses page not lining up correctly. However for other users it seems to line up perfectly fine. The difference can be seen below in the images, this happens both on mobile and desktop. 
+A couple of issues to report, one of which appears for me in my browers but for everyone else that has used/tested the web app it seems to be fine. This issue is the buttons on the expenses page not lining up correctly. However for other users it seems to line up perfectly fine. The difference can be seen below in the images, this happens both on mobile and desktop. 
 
 This is how the app buttons appear for me : 
 
@@ -488,6 +527,10 @@ This is how the app buttons appear on someone else's desktop (mobile view):
 Another issue was the image on the about me page, when the screen gets small the image shrinks quite a fair bit i think it would be better if a media query had been used to hide the image when it gets below a certain screen size. 
 
 ![Image Bug](/static/images/readme/image_bug.png)
+
+The web app is functioning how it should, however on the day of submission I did one final test and came across a new bug which I found out to be a bootstrap issue, and not necessarily anything to do with code that has been written. The image below shows the issue: 
+
+![Bootstrap Dev Tools Issue](/static/images/readme/bug_error.png)
 
 
 # Technology Stack Used:
