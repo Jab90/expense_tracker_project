@@ -1,4 +1,4 @@
-![Add image Here]
+![Home Page for Documentation](/static/images/readme/homepage_documentation.png)
 
 # Welcome to Penny Pinchers Expenses App
 
@@ -7,7 +7,7 @@
 
 The Penny Pinchers Expenses app is designed to allow users to organise, edit, display and delete their expenses, which will help them long term to manage their finances. By just clicking the "Add expense" button and filling out the details a user can add thier costs to a list, later on down the line if they wish to the user can also delete or edit the list or expense. The user also gets a total of their expenses so they can be aware as to the exact number all their expenses come to. The web app allows only registered users to create thier own expenses tracker list. Users that aren't registered will not be able to use the expense tracker, but can register for an account and browse the about us page.
 
-# **[Link to Live Site](INSERT HEROKU LINK HERE)**
+# **[Link to Live Site](https://expense-tracker-jab-ci-2da8d219d7d6.herokuapp.com/)**
 
 *This project is created as a final portfolio project for Code Institute (CI).*
 
