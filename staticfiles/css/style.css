@@ -1,4 +1,5 @@
-/* body {
+ /* Main body */
+ body {
     background-color: #F9FAFC;
 }
 
@@ -21,6 +22,16 @@
     background-color: #F9FAFC;
 }
 
+/* Background image on home page (index.html) */
+
+.bg-custom {
+    background-image: url('https://res.cloudinary.com/dq06nhp6z/image/upload/v1723568047/penny_pinchers_home_img_seasje.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    min-width: 100%;
+}
+
 /* Expenses */
 
 .list { 
@@ -28,11 +39,28 @@
 }
 
 .item {
-    border: red solid;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
 } 
 
-body {
-    border: red solid 2px;
+.item-buttons {
+    display: flex;
+    gap: 5px;
+    margin-right: 15px;
 }
+
+.item-name { 
+    display: block;
+    padding-left: 15px;
+}
+
+.item-amount { 
+    padding-left: 15px;
+}
+
+.total-expense-sum {
+    padding-left: 10px;
+}
+
