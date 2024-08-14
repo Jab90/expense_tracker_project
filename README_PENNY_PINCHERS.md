@@ -26,7 +26,7 @@ The Penny Pinchers Expenses app is designed to allow users to organise, edit, di
 7. [ Technology Stack Used ](#technology-stack-used)
 8. [ Bugs ](#bugs)
 9. [ Deployment ](#deployment)
-10.
+10.[ Resources ](#resources)
 
 # UX/UI
 
@@ -542,23 +542,82 @@ Another issue was the image on the about me page, when the screen gets small the
 
 - Create an env.py in the base level directory of the Django app. 
 - Import os in env.py. 
-- Set up the necessary environment variables in env.py, including the SECRET_KEY and DATABASE_URL. 
-- Update the settings.py file so it can use the environment variables for SECRET_KEY and DATABASE_URL.
+- Set up the necessary environment variables in env.py, including the `SECRET_KEY` and `DATABASE_URL`. 
+- Update the settings.py file so it can use the environment variables for `SECRET_KEY` and `DATABASE_URL`.
 - Configure environment variables in Heroku under the settings tab and then go to 'Config Vars'.
+- After clicking reveal 'Config Vars' add a new record with the `SECRET_KEY`.
+- Do the same again as the above step but add a new record `CLOUDINARY_URL`.
+- Do the same step above and add a new record `DISABLE_COLLECTSTATIC` as the 'key' and the 'value' should be 1. 
 - Migrate models onto the new database connection in the terminal. 
 - Back to the settings.py file, configure static files and template directories. 
-- In the ALLOWED_HOSTS list add Heroku. 
+- In the `ALLOWED_HOSTS` list add Heroku. 
 
 #### Pushing Changes and Creating A Procfile 
 
 - Create a Procfile in the base level directory.
-- Add the command needed to run the project in the Procfile. 
+- Add the command needed to run the project in the Procfile (web: gunicorn your_project_name.wsgi). 
 - Add, Commit and Push these changes to GitHub. 
 
 #### Heroku Deployment 
 
-- 
+- In Heroku, find the 'deploy' tab, scroll down the page and deploy the branch. 
+- Any errors that may occur will be shown in the build tab. 
+- Once deployment is successful Heroku will display a link to the live site. 
+- Be sure to resolve any issues/errors by editing the code as necessary. 
 
+#### Final Deployment 
 
+- When deploying the project be sure to have `DEBUG = FALSE` in settings.py
+- In heroku you can delete the 'Config Vars' for `DISABLE_COLLECTSTATIC = 1`. 
 
+### Forking the Repository 
 
+By forking the GitHub Repository you are able to create a copy of the original repository without affecting the original. To do this follow these steps: 
+
+- Log in to GitHub (Create an account if you havent got one already). 
+- Visit this projects [repository link](https://github.com/Jab90/expense_tracker_project).
+- At the top of the repository and to the right click on 'Fork'.
+
+![Fork Project](/static/images/readme/fork_project.png)
+
+### Creating a Clone of the Repository
+
+When cloning, it allows you to make a local copy of the repository. Follow theses steps to do this: 
+
+- Navigate to the [Penny Pinchers Repository](https://github.com/Jab90/expense_tracker_project).
+- Go to the <>CODE button. 
+- Make sure you can see that you're in the 'Local Tab' section and copy the URL. 
+- Go to your terminal and change the directory to the location you would like it to be in. 
+- Use `git clone` and paste in the copied repository URL. 
+
+![Clone Project](/static/images/readme/clone.png)
+
+##### [ Back To Top ](#table-of-contents)
+
+# Resources
+
+- [Django Documentation](https://docs.djangoproject.com/en/5.1/)
+- [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
+- [Cloudinary Documentation](https://cloudinary.com/documentation/programmable_media_overview)
+- [Chat GPT](https://chatgpt.com)
+- [Bootstrap Documentation](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+- [Stack Overflow](https://stackoverflow.com)
+- [Code Institute Full Stack Development Course Materials](https://codeinstitute.net)
+- [Code Institute Slack](https://slack.com)
+
+##### [ Back To Top ](#table-of-contents)
+
+# Credits and Acknowledgements 
+
+Firstly I would like to thank Code Institute for providing me with the foundational knowledge to build a project like this. My facilators and tutors at Code Institute have been brilliant so a special thanks to **Lewis Dillon**, **David Calikes**, **Kevin Loughrey**, **Martin McInerney** and **Marc Briscoe**. Last but not least I would like to thank my cohort peers who have helped me along with this project.
+
+## Code 
+
+- Code Institute course content aiding to build this project along with the SME sessions. 
+- GitHub Users **CyberArchitect777**, **LewF-Dev** for their feedback and help throughout this project.
+- GitHub Users **katiejanecoughlan**, **Tekali7**, **enocol** and **Gordan-Meade** for sharing a best practice for my README structure. 
+
+## Images
+
+- The Penny Pinchers home screen image was taken from [Freepik](https://www.freepik.com/)
+- The About page image which says penny pinchers was taken from [The Gamecrafter](https://www.thegamecrafter.com/games/penny-pinchers)
